@@ -1,9 +1,5 @@
-
 provider "aws" {
-   profile = "configs"
-    default_tags {
-                tags = {
-                    name = "aws"
-                }
-    }
+ region = "ap-south-1"
+ profile = "configs"
+ 
 }

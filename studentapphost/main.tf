@@ -54,14 +54,12 @@ resource "aws_security_group" "this_student_sg" {
 
 
 # EC2 Instance for Web Server (Student App with Tomcat 9)
-resource "aws_instance" "web" {
-  ami           = var.this_ami
-  instance_type = var.instance_type
-  key_name      = var.key_name
+resource "aws_instance" "web_server_instance" {
+  ami                    = var.ubuntu_ami
+  instance_type          = var.aws_instance_type
+  security_groups        = [aws_security_group.web_server.name]
+  key_name               = var.key_name
   associate_public_ip_address = true
-  #count                       = var.instance_count
-  #vpc_security_group_ids = [aws_security_group.this_student_sg.id]
-  #availability_zone      = var.availability_zone
   
 
 

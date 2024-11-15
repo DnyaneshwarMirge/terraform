@@ -57,7 +57,7 @@ resource "aws_security_group" "this_student_sg" {
 resource "aws_instance" "web_server_instance" {
   ami                    = var.ubuntu_ami
   instance_type          = var.aws_instance_type
-  security_groups        = [aws_security_group.web_server.name]
+  security_groups        = [aws_security_group.this_student_sg.name]
   key_name               = var.key_name
   associate_public_ip_address = true
   

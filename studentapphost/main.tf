@@ -1,52 +1,38 @@
-resource "aws_security_group" "this_student_sg" {
-  name        = "student-security-group"
-  description = "Security group for my StudentApp"
-  #vpc_id      = var.vpc_id  # replace with your VPC ID
+# Security Group for EC2 Instance (Tomcat Web Server)
+resource "aws_security_group" "web_server" {
+  #vpc_id = aws_vpc.main_vpc.id
+
 
   # Inbound rules
   ingress {
-    description      = "Allow HTTP traffic"
-    from_port        = 80
-    to_port          = 80
-    protocol         = "tcp"
-    cidr_blocks      = ["0.0.0.0/0"]
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
   }
-
   ingress {
-    description      = "Allow HTTPS traffic"
-    from_port        = 443
-    to_port          = 443
-    protocol         = "tcp"
-    cidr_blocks      = ["0.0.0.0/0"]
+    from_port   = 8080
+    to_port     = 8080
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
   }
-
-  ingress {
-    description      = "Allow SSH access"
-    from_port        = 22
-    to_port          = 22
-    protocol         = "tcp"
-    cidr_blocks      = ["0.0.0.0/0"]  # Replace with specific IP for better security
-  }
-
-  ingress {
-    description      = "Allow SSH access"
-    from_port        = 8080
-    to_port          = 8080
-    protocol         = "tcp"
-    cidr_blocks      = ["0.0.0.0/0"]  # Replace with specific IP for better security
-  }
-
   # Outbound rules
+  ingress {
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
   egress {
-    description      = "Allow all outbound traffic"
-    from_port        = 0
-    to_port          = 0
-    protocol         = "-1"
-    cidr_blocks      = ["0.0.0.0/0"]
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   tags = {
-    Name = "student-sg"
+    Name = "StudentApp-SG"
   }
 }
 

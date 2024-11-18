@@ -8,10 +8,10 @@ module "ec2"{
 }
 
 module "aws_vpc" {
-        source = ""
-        this_vpc_cidr_block = "12.11.0.0/16"
-        this_vpc_tags = "this_vpc"
-        this_subnet_pub_cidr_block  = "12.11.0.0/17"
-        this_subnet_pub_map_ip = true
+        source = "/home/anup/deleteafterpractice/Terraform/Module/resources/VPC"
+        this_vpc_cidr_block = "192.168.0.0/16"
+        this_vpc_cidr_tags = "vpc"
+        this_public_cidr_block  = "192.168.0.0/17"
+        this_public_map_pub = true
         this_public_tags = "public"
 }

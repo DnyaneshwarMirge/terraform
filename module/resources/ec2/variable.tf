@@ -21,7 +21,10 @@ variable "this_vpc_security_group_ids" {
      
 }
 
-variable "this_list" {
-    type = string
-     
+variable "instance_type" {
+  type        = string
+}
+
+variable "key_name" {
+  type        = string
 }

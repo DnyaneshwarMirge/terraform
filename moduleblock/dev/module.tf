@@ -1,6 +1,6 @@
 module "ec2" {
     source = "/home/cloudshell-user/terraform/moduleblock/resources/ec2"
-    this_image_id = "ami-012967cc5a8c9f891"
+    this_image_id = "ami-0dee22c13ea7a9a67"
     instance_type = "t2.micro"
     this_disable_api_stop = false
     this_disable_api_termination = false

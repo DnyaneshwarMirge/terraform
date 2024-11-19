@@ -8,6 +8,7 @@ module "ec2" {
     this_aws_instance_subnet = module.vpc.subnet_id
     key_name = "d"
     sg_name = module.vpc.vpc_id
+    vpc_id          = module.vpc.vpc_id
     //this_aws_vpc_id = module.aws_vpc.aws_vpc_id
 }
 

@@ -20,9 +20,3 @@ variable "key_name" {
 variable "this_aws_instance_subnet" {
    type = string
 }
-variable "sg_name" {
-  type        = string
-}
-variable "vpc_id" {
-  type        = string
-}

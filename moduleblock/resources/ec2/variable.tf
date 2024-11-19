@@ -17,3 +17,6 @@ variable "instance_type" {
 variable "key_name" {
   type        = string
 }
+variable "this_aws_instance_subnet" {
+   type = string
+}

@@ -1,11 +1,12 @@
 module "ec2" {
     source = "/home/cloudshell-user/terraform/moduleblock/resources/ec2"
     this_image_id = "ami-012967cc5a8c9f891"
-    this_list = "t2.micro"
+    instance_type = "t2.micro"
     this_disable_api_stop = false
     this_disable_api_termination = false
     #this_vpc_security_group_ids = "sg-0505874879e7ce6cd"
     this_aws_instance_subnet = module.vpc.subnet_id
+    key_name = "d"
     sg_name = module.vpc.vpc_id
     //this_aws_vpc_id = module.aws_vpc.aws_vpc_id
 }

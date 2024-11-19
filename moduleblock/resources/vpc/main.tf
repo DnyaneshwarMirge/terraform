@@ -10,6 +10,6 @@ resource "aws_subnet" "this_public" {
        // = default_route_table_id'
   map_public_ip_on_launch = var.this_public_map_pub //true
   tags = {
-    Name = var.this_public_tags
+    Name = var.this_subnet_pub_tags
   }
 }

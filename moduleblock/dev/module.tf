@@ -1,5 +1,5 @@
 module "ec2" {
-    source = "/home/anup/terraform/deleteafterpractice/Module/Resources/EC2"
+    source = "/home/cloudshell-user/terraform/moduleblock/resources/ec2"
     this_image_id = "ami-012967cc5a8c9f891"
     this_list = "t2.micro"
     this_disable_api_stop = false
@@ -11,7 +11,7 @@ module "ec2" {
 }
 
 module "vpc" {
-     source = "/home/anup/terraform/deleteafterpractice/Module/Resources/VPC"
+     source = "/home/cloudshell-user/terraform/moduleblock/resources/vpc"
      this_vpc_cidr_block = "12.11.0.0/16"
      this_vpc_tags = "this_vpc"
      this_subnet_pub_cidr_block = "12.11.0.0/17"

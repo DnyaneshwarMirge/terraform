@@ -1,7 +1,7 @@
 variable "this_vpc_cidr_block" {
     type = string
 }
-variable "this_vpc_tags" {
+variable "var.this_vpc_cidr_tags" {
      type = string
 }
 variable "this_subnet_pub_cidr_block" {

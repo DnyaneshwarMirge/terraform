@@ -2,7 +2,7 @@
 #LockID
 terraform {
     backend "s3" {
-        bucket = "cloudbatch38"
+        bucket = "cloud38"
         key = "terraform.tfstate"
         dynamodb_table = "cbz38"
         region = "ap-south-1"

@@ -36,7 +36,7 @@ resource "aws_security_group" "web_server" {
   }
  
   tags = {
-    Name = "sg"
+    Name = "terra"
   }
 }
 

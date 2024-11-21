@@ -5,7 +5,7 @@ terraform {
         bucket = "cloudbatch38"
         key = "terraform.tfstate"
         dynamodb_table = "cbz38"
-        region = "us-east-1"
+        region = "ap-south-1"
         profile = "configs"
         shared_credentials_files = ["/home/cloudshell-user/.aws/credentials"]
     }

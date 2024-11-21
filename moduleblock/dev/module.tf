@@ -2,7 +2,7 @@ module "ec2" {
     source = "/home/cloudshell-user/terraform/moduleblock/resources/ec2"
     this_This_ami = "ami-09b0a86a2c84101e1"
     this_ec2type = "t2.micro"
-    This_key  = "mum-key"
+    This_key  = "d"
     this_disable_api_stop = false
     this_disable_api_termination = false
     #this_vpc_security_group_ids = "sg-0505874879e7ce6cd"

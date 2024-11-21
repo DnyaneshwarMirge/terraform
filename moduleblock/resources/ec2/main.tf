@@ -1,3 +1,4 @@
+
 resource "aws_security_group" "web_server" {
   #name        = var.ec2_security_group_name
   #description = var.ec2_security_group_description

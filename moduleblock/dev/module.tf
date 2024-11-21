@@ -12,7 +12,7 @@ module "ec2" {
     //this_aws_vpc_id = module.aws_vpc.aws_vpc_id
 }
 
-module "aws_vpc" {
+module "vpc" {
      source = "/home/cloudshell-user/terraform/moduleblock/resources/vpc"
      this_vpc_cidr_block = "192.168.0.0/16"
      this_vpc_tags = "this_vpc"

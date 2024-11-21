@@ -20,10 +20,6 @@ resource "aws_security_group" "sg" {
   }
 }
 
-tags = {
-    Name = "sg"
-  }
-}
 
 
 

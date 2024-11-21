@@ -12,12 +12,12 @@ module "ec2" {
     //this_aws_vpc_id = module.aws_vpc.aws_vpc_id
 }
 
-module "vpc" {
+module "aws_vpc" {
      source = "/home/cloudshell-user/terraform/moduleblock/resources/vpc"
-     this_vpc_cidr_block = "12.11.0.0/16"
+     this_vpc_cidr_block = "192.168.0.0/16"
      this_vpc_tags = "this_vpc"
-     this_subnet_pub_cidr_block = "12.11.0.0/17"
+     this_subnet_pub_cidr_block = "192.168.0.0/17"
      this_subnet_pub_map_ip  = true 
      this_subnet_pub_tags = "pub_subnet"
-     this_vpc_az = "ap-south-1"
+     this_vpc_az = "ap-south-1a"
 }

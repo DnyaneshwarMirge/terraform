@@ -5,7 +5,6 @@ resource "aws_s3_bucket" "my_bucket" {
     force_destroy = true  # Deletes the bucket even if it contains objects
 }
 
-}
 
 # Resource to create 3 buckets with valid names
 resource "aws_s3_bucket" "bucket38" { 

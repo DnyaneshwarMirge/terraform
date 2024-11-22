@@ -20,7 +20,7 @@ variable "main_user_name" {
 
 variable "imageid" {
     type = list(string)
-    default = ["ami-0aebec83a182ea7ea","ami-00a6b23a4dd325f30","ami-0dee22c13ea7a9a6"]
+    default = ["ami-0aebec83a182ea7ea","ami-00a6b23a4dd325f30","ami-0aebec83a182ea7ea"]
 
 }
 

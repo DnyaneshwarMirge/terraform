@@ -1,6 +1,6 @@
 resource "aws_s3_bucket" "my_bucket" { 
     count = length(var.users_list)  #3
-    name = var.users_list[count.index]
+    bucket = var.users_list[count.index]
 }  
 resource "aws_s3_bucket" "bucket38" { 
     bucket = "D.${count.index}"   #neo

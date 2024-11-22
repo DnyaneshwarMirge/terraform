@@ -3,7 +3,7 @@ resource "aws_s3_bucket" "my_bucket" {
     name = var.users_list[count.index]
 }  
 resource "aws_s3_bucket" "bucket38" { 
-    name = "D.${count.index}"   #neo
+    bucket = "D.${count.index}"   #neo
     count = 3 
 }  
 

@@ -6,7 +6,7 @@ provider "aws" {
  resource "aws_instance" "this_aws_instance" {
     ami = "ami-0614680123427b75e"
     vpc_security_group_ids = ["sg-0f4734f182e556bae"]
-    key_name = "anup_delete"
+    key_name = "d"
     instance_type = "t2.micro"
      
      provisioner "file" {
